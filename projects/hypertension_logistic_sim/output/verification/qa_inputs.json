@@ -1,0 +1,15 @@
+{
+  "key_results": [
+    {"id": "G0-3", "metric": "n_total", "value": 100},
+    {"id": "G0-3", "metric": "n_events", "value": 43},
+    {"id": "G2B-1", "metric": "age_or", "value": 1.061},
+    {"id": "G2B-1", "metric": "smoking_or", "value": 2.79},
+    {"id": "G2B-1", "metric": "male_or", "value": 1.267}
+  ],
+  "assumption_checks": [
+    {"id": "G2B-1", "model": "logistic_regression", "check": "sample_events", "required": true, "result": "events = 43, non-events = 57 (both >= 10)", "status": "pass"},
+    {"id": "G2B-1", "model": "logistic_regression", "check": "complete_convergence", "required": true, "result": "max SE = 0.59 < 10 (no complete separation)", "status": "pass"},
+    {"id": "G2C-1", "model": "logistic_regression", "check": "vif_multicollinearity", "required": false, "result": "max VIF = 1.07 < 5.0", "status": "pass"}
+  ]
+}
+

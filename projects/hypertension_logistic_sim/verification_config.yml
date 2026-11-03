@@ -1,0 +1,38 @@
+on_failure: warn
+
+key_results:
+  - id: G0-3
+    metric: n_total
+    expected: 100
+    tolerance: 0
+  - id: G0-3
+    metric: n_events
+    expected: 43
+    tolerance: 0
+  - id: G2B-1
+    metric: age_or
+    expected: 1.061
+    tolerance: 0.02
+  - id: G2B-1
+    metric: smoking_or
+    expected: 2.790
+    tolerance: 0.05
+  - id: G2B-1
+    metric: male_or
+    expected: 1.267
+    tolerance: 0.05
+
+assumption_checks:
+  - id: G2B-1
+    model: logistic_regression
+    check: sample_events
+    required: true
+  - id: G2B-1
+    model: logistic_regression
+    check: complete_convergence
+    required: true
+  - id: G2C-1
+    model: logistic_regression
+    check: vif_multicollinearity
+    required: false
+

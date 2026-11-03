@@ -1,0 +1,11 @@
+variable,label_ja,type,values_units,description
+patient_id,患者ID,integer,1-100,一意の患者識別番号
+age,年齢,numeric,歳 (40-75),受診時の満年齢
+sex,性別,factor,"Female", "Male",生物学的性別
+bmi,BMI,numeric,kg/m^2 (18.5-35.0),Body Mass Index (体重kg / 身長m^2)
+smoking,現在喫煙,factor,0 = Non-smoker; 1 = Current smoker,調査時点での能動喫煙習慣
+alcohol,飲酒習慣,factor,"None/Occasional", "Regular",定期的な飲酒習慣の有無
+sbp,収縮期血圧,numeric,mmHg,安静時座位収縮期血圧測定値
+dbp,拡張期血圧,numeric,mmHg,安静時座位拡張期血圧測定値
+htn,高血圧症,factor,0 = No; 1 = Yes,主要アウトカム：SBP>=140 または DBP>=90
+
